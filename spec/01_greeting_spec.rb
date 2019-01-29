@@ -15,7 +15,7 @@ describe './lib/greeting.rb' do
     it 'greets the person whose name was passed in as an argument' do
       allow($stdout).to receive(:puts)
 
-      output = capture_puts{ greeting("Sally") }
+      output = capture_puts{ greeting("Sally\n") }
 
       expect(output).to include("Hello Sally. It's nice to meet you.")
     end
